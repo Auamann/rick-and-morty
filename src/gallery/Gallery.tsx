@@ -8,7 +8,7 @@ export default function Gallery() {
     const [name, setName] = useState('');
 
     const components = characters
-            .filter(c => c.name.includes(name))
+            .filter(c => c.name.toLowerCase().includes(name.toLowerCase()))
             .map(c => <GalleryItem character={{name: c.name, image: c.image, status: c.status, species: c.species}} />)
 
     return (
