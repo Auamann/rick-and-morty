@@ -15,7 +15,7 @@ export default function Gallery() {
         <div className="gallerie-wrapper">
             <h1>The Rick and Morty gallery</h1>
             <div className="search">
-                Search for name: <input type="text" value={name} onChange={ev => setName(ev.target.value)} />
+                <label htmlFor="search-value">Search for name:</label> <input id="search-value" type="text" value={name} onChange={ev => setName(ev.target.value)} />
             </div>
             <div className="gallery">
                 {components}
